@@ -3,7 +3,7 @@ Test [PMB software](https://www.sigb.net/index.php?lvl=cmspage&pageid=6&id_rubri
 
 ## Introduction
 
-This project contains a docker-compose to test quickly PMB software. It could be
+This project contains a docker-compose file to test quickly PMB software. It could be
 interesting to test it before installing it on a server.
 
 ## How to
@@ -16,9 +16,9 @@ Follow these steps to test PMB:
 docker-compose up -d
 ```
 It will start 3 services :
-- one to connect to the db
 - the webserver
 - the db engine 
+- one to connect to the db
 
 It could be long the first time (depending on your internet speeed). Check if
 all services are okay with:
@@ -30,12 +30,13 @@ Normally all services are "up".
 ## Try PMB
 
 The Docker exposed port is 8080, so in your browser go to
-"localhost:8080/pmb/tables/install.php" and it will ask you to install pmb.
+"http://localhost:8080/pmb/tables/install.php" and it will ask you to install pmb.
 The information are :
 - db host: db
 - db name: pmb
 - db root password : password
 
+After that, PMB will be available at "http://localhost:8080/pmb".
 
 
 
